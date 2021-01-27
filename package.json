@@ -1,16 +1,22 @@
 {
   "name": "angel-mat-ngxs",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
-    "ng": "ng",
+
     "start": "ng serve",
-    "build": "ng build",
-    "build:lib":"ng build material",
-    "npm:pack": "cd dist/material && npm pack",
-    "package": "npm run build:lib && npm run npm:pack",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "serve": "concurrently \"npm run start\" \"npm run serve:electron \"",
+    "file": "ng build --base-href ./ && npm run main:electron && electron .",
+    "build": "ng build --base-href ./ && npm run main:electron && electron-builder build",
+    "package": "npm run build:lib && npm run npm:pack",
+
+    "serve:electron": "wait-on tcp:4200 && npm run main:electron && electron . --serve",
+    "main:electron": "tsc -p tsconfig.main.json",
+    "build:lib": "ng build material",
+    "npm:pack": "cd dist/material && npm pack"
   },
   "private": true,
   "dependencies": {
@@ -35,9 +41,15 @@
     "@angular-devkit/build-angular": "~0.1101.1",
     "@angular/cli": "~11.1.1",
     "@angular/compiler-cli": "~11.1.0",
+    "@types/core-js": "^2.5.4",
+    "@types/electron": "^1.6.10",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "concurrently": "^5.3.0",
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1",
+    "electron-reload": "^1.5.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.2.0",
@@ -45,10 +57,10 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "typescript": "~4.1.2",
+    "wait-on": "^5.2.1"
   }
 }
