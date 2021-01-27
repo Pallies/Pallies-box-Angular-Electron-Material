@@ -8,6 +8,15 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "paths": {
+      "material": [
+        "dist/material/material",
+        "dist/material",
+        "projects/material/*",
+      ],
+      "shared":["src/app/shared/*"],
+      "store":["src/app/store/*"],
+    },
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
