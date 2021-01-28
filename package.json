@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "main": "main.js",
   "scripts": {
-
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +11,6 @@
     "file": "ng build --base-href ./ && npm run main:electron && electron .",
     "build": "ng build --base-href ./ && npm run main:electron && electron-builder build",
     "package": "npm run build:lib && npm run npm:pack",
-
     "serve:electron": "wait-on tcp:4200 && npm run main:electron && electron . --serve",
     "main:electron": "tsc -p tsconfig.main.json",
     "build:lib": "ng build material",
@@ -33,6 +31,7 @@
     "@ngxs/devtools-plugin": "^3.7.1",
     "@ngxs/logger-plugin": "^3.6.2-dev.master-eaa5d86",
     "@ngxs/store": "^3.6.2-dev.master-eaa5d86",
+    "material-design-icons": "^3.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
