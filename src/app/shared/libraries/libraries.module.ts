@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from '../../../../projects/material/src/lib/material.module';
 
 import { LibMaterialModule } from '@lib/src/public-api';
 

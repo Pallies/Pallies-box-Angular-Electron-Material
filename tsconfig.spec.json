@@ -14,5 +14,10 @@
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
   ]
 }

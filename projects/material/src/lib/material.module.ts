@@ -96,3 +96,6 @@ import { TextFieldModule } from '@angular/cdk/text-field';
   ],
 })
 export class MaterialModule {}
+// référence Matérial des modules pour vos imports
+
+
