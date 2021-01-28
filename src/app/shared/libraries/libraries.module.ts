@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material/material.module';
 
-import { LibMaterialModule } from 'projects/material/src/public-api';
+import { LibMaterialModule } from '@lib/src/public-api';
 
 @NgModule({
   exports:[

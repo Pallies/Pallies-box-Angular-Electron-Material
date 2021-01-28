@@ -9,13 +9,18 @@
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "paths": {
-      "material": [
+      "@lib/*": [
         "dist/material/material",
         "dist/material",
         "projects/material/*",
       ],
-      "shared":["src/app/shared/*"],
-      "store":["src/app/store/*"],
+      "@shared/*":["src/app/shared/*"],
+      "@store/*":["src/app/store/*"],
+      "@containers/*":["src/app/containers/*"],
+      "@core/*":["src/app/core/*"],
+      "@layouts/*":["src/app/layouts/*"],
+      "@services/*":["src/app/services/*"],
+      "@assets/*":["src/app/assets/*"],
     },
     "moduleResolution": "node",
     "importHelpers": true,

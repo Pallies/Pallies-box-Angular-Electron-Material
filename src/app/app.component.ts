@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Select, Selector, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { initializeStore } from './store/actions/store.action';
-import { storeSelect } from './store/selects/store.select';
+import { storeSelect } from '@store/selects/store.select';
 
 @Component({
   selector: 'app-root',
