@@ -1,7 +1,7 @@
 {
   "productName": "angel-mat-ngxs",
   "directories": {
-    "output": "dist/"
+    "output": "build/"
   },
   "files": [
     "**/*",

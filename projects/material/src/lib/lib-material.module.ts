@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
+import { TestModule } from './test/test.module';
 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-  ],
-  exports: []
+  exports: [TestModule]
 })
 export class LibMaterialModule { }
